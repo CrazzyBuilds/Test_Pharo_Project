@@ -1,0 +1,9 @@
+# Images et fichiers de travail Pharo
+*.image
+*.changes
+*.sources
+pharo-local/
+PharoDebug.log
+*.fuel
+ombu-sessions/
+play-cache/
