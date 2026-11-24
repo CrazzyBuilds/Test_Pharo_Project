@@ -19,7 +19,7 @@ Dans un Playground d'une image Pharo 13 :
 ```smalltalk
 Metacello new
 	baseline: 'ModelisationGraphes';
-	repository: 'github://CrazzyBuilds/projet-modelisation-drones:main/src';
+	repository: 'github://CrazzyBuilds/Test_Pharo_Project:main/src';
 	load.
 ```
 
