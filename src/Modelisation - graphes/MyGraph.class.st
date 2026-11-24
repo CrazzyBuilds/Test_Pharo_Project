@@ -105,6 +105,16 @@ MyGraph >> removeNode: aNode [
 	nodes removeKey: aNode id
 ]
 
+{ #category : 'stepping' }
+MyGraph >> step [
+	"make a runtime step"
+
+	| activables |
+	activables := self activableArcs.
+	activables do: [ :a | a traverse].
+	^ activables notEmpty
+]
+
 { #category : 'nodes accesing' }
 MyGraph >> updateNode: aNode newId: anId [
 	"node's id is the dictionary key."

@@ -79,3 +79,11 @@ MyArc >> source: aNode destination: anotherNode [
 	source := aNode.
 	destination := anotherNode
 ]
+
+{ #category : 'traversing' }
+MyArc >> traverse [
+	"appliquer la clause"
+
+	self evaluateClause ifTrue: 
+		[self behavior value: self]
+]

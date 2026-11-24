@@ -4,7 +4,8 @@ Class {
 	#instVars : [
 		'id',
 		'arcs',
-		'behavior'
+		'behavior',
+		'payload'
 	],
 	#category : 'Modelisation - graphes',
 	#package : 'Modelisation - graphes'
@@ -76,6 +77,18 @@ MyNode >> initialize [
 	arcs:= OrderedCollection new.
 	behavior := [ :a| a ]
 	
+]
+
+{ #category : 'accessing' }
+MyNode >> payload [
+
+	^ payload
+]
+
+{ #category : 'accessing' }
+MyNode >> payload: anObject [
+
+	payload := anObject
 ]
 
 { #category : 'printing' }

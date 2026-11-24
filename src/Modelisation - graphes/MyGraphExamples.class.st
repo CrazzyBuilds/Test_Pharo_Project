@@ -66,6 +66,20 @@ MyGraphExamples class >> exampleGraph3 [
 ]
 
 { #category : 'examples' }
+MyGraphExamples class >> exampleGraph4 [
+	"un noeud, auto-incrémenté sur un arc"
+
+	| g n |
+	g := MyGraph new.
+	n := (MyNode fromId: 1) payload: 0; yourself.
+	g addNode: n.
+	g connect: n to: n using: (MyArc
+		clause: [ :node | node payload < 10 ]
+   		behavior: [ :arc | arc destination payload: arc destination payload + 1 ]).
+	^ g
+]
+
+{ #category : 'examples' }
 MyGraphExamples class >> exampleNode1 [
 	" Un seul noeud, dont l'id est 12/5 eme "
 
